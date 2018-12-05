@@ -5,29 +5,29 @@ import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.Math.*;
+//import java.lang.Math.*;
 import java.util.concurrent.*;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.awt.Shape;
+//import java.io.FileNotFoundException;
+//import java.awt.Shape;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.OverlayLayout;
+//import java.awt.Graphics2D;
+//import javax.swing.OverlayLayout;
 import java.awt.event.*;
 
 import javax.imageio.ImageIO;
 import java.io.FileReader; 
 import java.util.Iterator; 
-import java.util.Map;
+//import java.util.Map;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.BufferedInputStream;
+//import java.io.IOException;
+//import java.io.InputStream;
+//import java.io.BufferedInputStream;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+//import org.json.simple.parser.ParseException;
 
 public class PlayVideo {
 
@@ -45,7 +45,7 @@ public class PlayVideo {
 	private JFrame frame;
 	private GridBagConstraints c;
 	static String folderName = null;
-	private File file;
+	//private File file;
 	static PlayVideo ren;
 	private ScheduledExecutorService executor;
 	private JButton importVideo;
@@ -59,8 +59,8 @@ public class PlayVideo {
 	private ArrayList<Integer> BBoxindex;
 	private int mX;
 	private int mY;
-	private boolean mclick;
-	private boolean onPlay = false;
+	//private boolean mclick;
+	//private boolean onPlay = false;
 
 
 	public static void main(String[] args) {
@@ -76,8 +76,6 @@ public class PlayVideo {
 	}
 
 	public void runApp (){
-		BufferedImage original, result;
-
 		// Use labels to display the images
 		frame = new JFrame();
 		frame.setSize(500, 500);
@@ -370,7 +368,7 @@ public class PlayVideo {
 					mX = -1;
 					mY = -1;
 					
-					if (frameNumber == 9000) executor.shutdown();
+					if (frameNumber == MAX_FRAME) executor.shutdown();
 				} catch (ArrayIndexOutOfBoundsException e) {}
 		    }
 		};
